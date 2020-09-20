@@ -77,7 +77,30 @@ md"# Table of contents
 
 # ╔═╡ 7d8587d0-fb2b-11ea-2028-6b18fbbc3289
 md"# Yao.jl ecosystem
-![](assets/yao_01.png)
+![](https://github.com/ChenZhao44/ZXCalculusTutorials/raw/zx-meeting/assets/yao-01.png)
+"
+
+# ╔═╡ 5376aa3e-fb2c-11ea-33ff-5b44901bb2d2
+md"# Yao.jl ecosystem
+![](https://github.com/ChenZhao44/ZXCalculusTutorials/raw/zx-meeting/assets/yao-02.png)
+"
+
+# ╔═╡ 5a8db2b2-fb2c-11ea-1200-8918b662a634
+md"# Yao.jl ecosystem
+![](https://github.com/ChenZhao44/ZXCalculusTutorials/raw/zx-meeting/assets/yao-03.png)
+"
+
+# ╔═╡ 5fe94f80-fb2c-11ea-1278-2591ddbf30cb
+md"# Yao.jl ecosystem
+![](https://github.com/ChenZhao44/ZXCalculusTutorials/raw/zx-meeting/assets/yao-04.png)
+"
+
+# ╔═╡ 8771dae0-fb2c-11ea-2619-73e18f7782ee
+md"# Yao.jl ecosystem
+# YaoLang.jl: a new quantum domain specific language
+[YaoLang.jl](https://github.com/QuantumBFS/YaoLang.jl) is a DSL for compiling quantum programs in Julia. It extends Julia grammar, such that one can define hybrid quantum-classical programs in Julia conveniently.
+
+
 "
 
 # ╔═╡ 0f7c4f36-f65c-11ea-2ad7-fd7a5e566701
@@ -86,8 +109,6 @@ md"# Using ZXCalculus.jl as a circuit optimizer
 
 
 ## YaoLang.jl
-
-[YaoLang.jl](https://github.com/QuantumBFS/YaoLang.jl) is a DSL for compiling quantum programs in Julia. It extends Julia grammar, such that one can define quantum circuits in Julia conveniently.
 "
 
 # ╔═╡ d3b4bffe-f65d-11ea-2fec-dbcc3902e14b
@@ -465,7 +486,11 @@ md"# Thank you!
 # ╟─c98641c8-f690-11ea-0fea-ad1506652181
 # ╟─544442d2-f651-11ea-3b85-15a6e3555de9
 # ╟─43c4f7e2-f655-11ea-062b-e3876cf5130a
-# ╠═7d8587d0-fb2b-11ea-2028-6b18fbbc3289
+# ╟─7d8587d0-fb2b-11ea-2028-6b18fbbc3289
+# ╟─5376aa3e-fb2c-11ea-33ff-5b44901bb2d2
+# ╟─5a8db2b2-fb2c-11ea-1200-8918b662a634
+# ╟─5fe94f80-fb2c-11ea-1278-2591ddbf30cb
+# ╠═8771dae0-fb2c-11ea-2619-73e18f7782ee
 # ╟─0f7c4f36-f65c-11ea-2ad7-fd7a5e566701
 # ╠═e87c192c-f65c-11ea-3fe0-6bfba4889a9c
 # ╟─d3b4bffe-f65d-11ea-2fec-dbcc3902e14b
