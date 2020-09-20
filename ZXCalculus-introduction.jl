@@ -50,25 +50,34 @@ md"# ZXCalculus.jl: ZX-calculus in Julia
 
 *PhD student, Academy of Mathematics and System Science, Chinese Academy of Sciences*
 
-This project is for GSoC 2020. Mentored by [Roger Luo](https://github.com/Roger-luo) and [Jinguo Liu](https://github.com/GiggleLiu).
+This project is for GSoC 2020. 
+
+Mentored by [Roger Luo](https://github.com/Roger-luo) and [Jinguo Liu](https://github.com/GiggleLiu).
 
 [https://github.com/QuantumBFS/ZXCalculus.jl](https://github.com/QuantumBFS/ZXCalculus.jl)
 "
 
 # ╔═╡ 43c4f7e2-f655-11ea-062b-e3876cf5130a
 md"# Table of contents
-1. Using ZXCalculus.jl as a circuit optimizer
+1. Yao.jl ecosystem
+
+2. Using ZXCalculus.jl as a circuit optimizer
     - YaoLang.jl
     - Loading OpenQASM codes
 
 
-2. Low-level Usages
+3. Low-level Usages
     - Constructing ZX-diagrams manually
     - Rewriting ZX-diagrams by rules
 
 
-3. Why ZXCalculus.jl?
+4. Why ZXCalculus.jl?
 
+"
+
+# ╔═╡ 7d8587d0-fb2b-11ea-2028-6b18fbbc3289
+md"# Yao.jl ecosystem
+![](assets/yao_01.png)
 "
 
 # ╔═╡ 0f7c4f36-f65c-11ea-2ad7-fd7a5e566701
@@ -456,6 +465,7 @@ md"# Thank you!
 # ╟─c98641c8-f690-11ea-0fea-ad1506652181
 # ╟─544442d2-f651-11ea-3b85-15a6e3555de9
 # ╟─43c4f7e2-f655-11ea-062b-e3876cf5130a
+# ╠═7d8587d0-fb2b-11ea-2028-6b18fbbc3289
 # ╟─0f7c4f36-f65c-11ea-2ad7-fd7a5e566701
 # ╠═e87c192c-f65c-11ea-3fe0-6bfba4889a9c
 # ╟─d3b4bffe-f65d-11ea-2fec-dbcc3902e14b
@@ -473,7 +483,7 @@ md"# Thank you!
 # ╟─2314d8a2-f66a-11ea-3268-adaf5cfab183
 # ╠═ac124442-f669-11ea-3364-69954cf06d85
 # ╟─b4c228ba-f686-11ea-3b50-3f94e666c971
-# ╠═1bc14166-f68b-11ea-00eb-bf2eb3060b3c
+# ╟─1bc14166-f68b-11ea-00eb-bf2eb3060b3c
 # ╟─dbfbf7c6-f68b-11ea-085f-bda481d8a15d
 # ╠═4cf932b8-f68c-11ea-3d19-bfb0dbbfdb97
 # ╠═6888138c-f68c-11ea-3b6b-af49a33c7ea5
