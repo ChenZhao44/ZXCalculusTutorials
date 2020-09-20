@@ -21,7 +21,7 @@ using ZXCalculus
 
 # ╔═╡ 2f4ce866-f693-11ea-2c36-3d18c82d6d2a
 begin
-	using LightGraphs
+	using LightGraphs, Multigraphs
 	g = Multigraph(6)
 	add_edge!(g, 1, 3)
 	add_edge!(g, 2, 4)
