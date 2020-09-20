@@ -100,7 +100,9 @@ md"# Yao.jl ecosystem
 # YaoLang.jl: a new quantum domain specific language
 [YaoLang.jl](https://github.com/QuantumBFS/YaoLang.jl) is a DSL for compiling quantum programs in Julia. It extends Julia grammar, such that one can define hybrid quantum-classical programs in Julia conveniently.
 
-
+![](https://github.com/ChenZhao44/ZXCalculusTutorials/raw/zx-meeting/assets/yao-05.png)
+## 
+![](https://github.com/QuantumBFS/YaoLang.jl/raw/master/demo.gif)
 "
 
 # ╔═╡ 0f7c4f36-f65c-11ea-2ad7-fd7a5e566701
@@ -489,7 +491,7 @@ md"# Thank you!
 # ╟─7d8587d0-fb2b-11ea-2028-6b18fbbc3289
 # ╟─5376aa3e-fb2c-11ea-33ff-5b44901bb2d2
 # ╟─5a8db2b2-fb2c-11ea-1200-8918b662a634
-# ╟─5fe94f80-fb2c-11ea-1278-2591ddbf30cb
+# ╠═5fe94f80-fb2c-11ea-1278-2591ddbf30cb
 # ╠═8771dae0-fb2c-11ea-2619-73e18f7782ee
 # ╟─0f7c4f36-f65c-11ea-2ad7-fd7a5e566701
 # ╠═e87c192c-f65c-11ea-3fe0-6bfba4889a9c
