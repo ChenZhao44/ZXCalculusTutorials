@@ -50,25 +50,61 @@ md"# ZXCalculus.jl: ZX-calculus in Julia
 
 *PhD student, Academy of Mathematics and System Science, Chinese Academy of Sciences*
 
-This project is for GSoC 2020. Mentored by [Roger Luo](https://github.com/Roger-luo) and [Jinguo Liu](https://github.com/GiggleLiu).
+This project is for GSoC 2020. 
+
+Mentored by [Roger Luo](https://github.com/Roger-luo) and [Jinguo Liu](https://github.com/GiggleLiu).
 
 [https://github.com/QuantumBFS/ZXCalculus.jl](https://github.com/QuantumBFS/ZXCalculus.jl)
+
+For this notebook:
+[https://github.com/ChenZhao44/ZXCalculusTutorials](https://github.com/ChenZhao44/ZXCalculusTutorials)
 "
 
 # ╔═╡ 43c4f7e2-f655-11ea-062b-e3876cf5130a
 md"# Table of contents
-1. Using ZXCalculus.jl as a circuit optimizer
+1. Ecosystem of Yao.jl
+
+2. Using ZXCalculus.jl as a circuit optimizer
     - YaoLang.jl
     - Loading OpenQASM codes
 
 
-2. Low-level Usages
+3. Low-level Usages
     - Constructing ZX-diagrams manually
     - Rewriting ZX-diagrams by rules
 
 
-3. Why ZXCalculus.jl?
+4. Why ZXCalculus.jl?
 
+"
+
+# ╔═╡ 7d8587d0-fb2b-11ea-2028-6b18fbbc3289
+md"# Ecosystem of Yao.jl
+![](https://github.com/ChenZhao44/ZXCalculusTutorials/raw/zx-meeting/assets/yao-01.png)
+"
+
+# ╔═╡ 5376aa3e-fb2c-11ea-33ff-5b44901bb2d2
+md"# Ecosystem of Yao.jl
+![](https://github.com/ChenZhao44/ZXCalculusTutorials/raw/zx-meeting/assets/yao-02.png)
+"
+
+# ╔═╡ 5a8db2b2-fb2c-11ea-1200-8918b662a634
+md"# Ecosystem of Yao.jl
+![](https://github.com/ChenZhao44/ZXCalculusTutorials/raw/zx-meeting/assets/yao-03.png)
+"
+
+# ╔═╡ 5fe94f80-fb2c-11ea-1278-2591ddbf30cb
+md"# Ecosystem of Yao.jl
+![](https://github.com/ChenZhao44/ZXCalculusTutorials/raw/zx-meeting/assets/yao-04.png)
+"
+
+# ╔═╡ 8771dae0-fb2c-11ea-2619-73e18f7782ee
+md"## YaoLang.jl: a new quantum domain specific language
+[YaoLang.jl](https://github.com/QuantumBFS/YaoLang.jl) is a DSL for compiling quantum programs in Julia. It extends Julia grammar, such that one can define hybrid quantum-classical programs in Julia conveniently.
+
+![](https://github.com/ChenZhao44/ZXCalculusTutorials/raw/zx-meeting/assets/yao-05.png)
+## 
+![](https://github.com/QuantumBFS/YaoLang.jl/raw/master/demo.gif)
 "
 
 # ╔═╡ 0f7c4f36-f65c-11ea-2ad7-fd7a5e566701
@@ -77,8 +113,6 @@ md"# Using ZXCalculus.jl as a circuit optimizer
 
 
 ## YaoLang.jl
-
-[YaoLang.jl](https://github.com/QuantumBFS/YaoLang.jl) is a DSL for compiling quantum programs in Julia. It extends Julia grammar, such that one can define quantum circuits in Julia conveniently.
 "
 
 # ╔═╡ d3b4bffe-f65d-11ea-2fec-dbcc3902e14b
@@ -87,7 +121,7 @@ md"### The macro `@device`
 In any function which is decorated by the macro @device, one can use the following codes to define quantum circuits.
 
 - `j => U` apply gate `U` on the `j`-th qubit
-- `@ctrl j k => U` apply controlled-`U` gate on the `j`-th qubit with the `k`-th qubit as the controlling qubit
+- `@ctrl j k => U` apply controlled-`U` gate on the `j`-th and the `k`-th qubit, where the `j`-th qubit is the controlling qubit and the `k`-th qubit is the target qubit.
 "
 
 # ╔═╡ 23b2fab2-f65d-11ea-0999-b7d4254cc58d
@@ -122,8 +156,8 @@ ZXCalculus.jl is highly integrated with YaoLang.jl.
 
 We can simply add an argument `optimizer = [opts...]` to call the backend circuit optimizer in ZXCalculus.jl. Currently, there are two optimizers supported.
 
-- `:zx_teleport` for the phase teleportation algorithm
-- `:zx_clifford` for Clifford simplification based on the circuit extraction algorithm
+- `:zx_teleport` for the phase teleportation algorithm. [arXiv: 1903.10477](https://arxiv.org/abs/1903.10477)
+- `:zx_clifford` for Clifford simplification based on the circuit extraction algorithm. [arXiv: 1902.03178](https://arxiv.org/abs/1902.03178)
 "
 
 # ╔═╡ 7880d40a-f65e-11ea-213b-fd34d729d463
@@ -165,7 +199,7 @@ gate_count(demo_circ_simp) # the simplified circuit with 14 gates
 md"##
 ### Test the equivalence of two circuits
 
-YaoLang.jl can compile quantum programs to instructions that can be run on different devices. For example, we can use the quantum simulator [Yao.jl](https://github.com/QuantumBFS/Yao.jl) as the backend.
+YaoLang.jl can compile quantum programs to instructions that can be run on different devices. For example, we can use the quantum simulator in [Yao.jl](https://github.com/QuantumBFS/Yao.jl) as the backend.
 "
 
 # ╔═╡ 13ada46e-f685-11ea-000d-65752cb70820
@@ -259,7 +293,7 @@ md"# More details about ZXCalculus.jl
 
 In ZXCalculus.jl, general ZX-diagrams are stored in the data structure `ZXDiagram`. The graphical backend of `ZXDiagram` is the multigraph. 
 
-We implemented a Julia multigraph library Multigraphs.jl base on APIs of LightGraphs.jl.
+We implemented a Julia multigraph library [Multigraphs.jl](https://github.com/QuantumBFS/Multigraphs.jl) base on APIs of [LightGraphs.jl](https://github.com/JuliaGraphs/LightGraphs.jl).
 "
 
 # ╔═╡ 3298fd08-f692-11ea-1393-1960d8f41cf4
@@ -275,7 +309,7 @@ md"It will be extremely complicated when constructing large ZX-diagrams.
 # ╔═╡ 1ff8b214-f693-11ea-002b-e3baabfe890f
 md"## Constructing ZX-diagrams from quantum circuits
 
-It is more recommanded to construct `ZXDiagram`s from quantum circuits. In ZXCalculus.jl, QCircuit is a data structure for representing quantum circuit.
+It is more recommanded to construct `ZXDiagram`s from quantum circuits. In ZXCalculus.jl, `QCircuit` is a data structure for representing quantum circuit.
 "
 
 # ╔═╡ 4d0334a4-f694-11ea-15df-2b0603b89f46
@@ -376,6 +410,10 @@ md"## Rules for ZXGraph
 There are 7 rules available for `ZXGraph`: 
 
 ![](https://chenzhao44.github.io/assets/blog_res/ZX/zxgraph-rules.png)
+
+[arXiv: 1903.10477](https://arxiv.org/abs/1903.10477)
+
+[arXiv: 1902.03178](https://arxiv.org/abs/1902.03178)
 "
 
 # ╔═╡ 56d61204-f69d-11ea-08da-e7ec818b8cb0
@@ -442,7 +480,7 @@ The above algorithms are first implemented in a Python package [PyZX](https://gi
 
 # ╔═╡ 54c39576-f757-11ea-3cdf-918909c07eb0
 md"## Benchmarks
-We tested the phase teleportation algorithm on 40 circuits with ZXCalculus.jl and PyZX. The benchmark results shown that ZXCalculus.jl has 8x-45x speed-up.
+We tested the phase teleportation algorithm on 40 circuits with ZXCalculus.jl and PyZX. The benchmark results shown that ZXCalculus.jl has 6x-50x speed-up.
 ![benchmarks](https://chenzhao44.github.io/assets/blog_res/ZX/benchmarks.png)
 "
 
@@ -456,6 +494,11 @@ md"# Thank you!
 # ╟─c98641c8-f690-11ea-0fea-ad1506652181
 # ╟─544442d2-f651-11ea-3b85-15a6e3555de9
 # ╟─43c4f7e2-f655-11ea-062b-e3876cf5130a
+# ╟─7d8587d0-fb2b-11ea-2028-6b18fbbc3289
+# ╟─5376aa3e-fb2c-11ea-33ff-5b44901bb2d2
+# ╟─5a8db2b2-fb2c-11ea-1200-8918b662a634
+# ╟─5fe94f80-fb2c-11ea-1278-2591ddbf30cb
+# ╟─8771dae0-fb2c-11ea-2619-73e18f7782ee
 # ╟─0f7c4f36-f65c-11ea-2ad7-fd7a5e566701
 # ╠═e87c192c-f65c-11ea-3fe0-6bfba4889a9c
 # ╟─d3b4bffe-f65d-11ea-2fec-dbcc3902e14b
@@ -473,7 +516,7 @@ md"# Thank you!
 # ╟─2314d8a2-f66a-11ea-3268-adaf5cfab183
 # ╠═ac124442-f669-11ea-3364-69954cf06d85
 # ╟─b4c228ba-f686-11ea-3b50-3f94e666c971
-# ╠═1bc14166-f68b-11ea-00eb-bf2eb3060b3c
+# ╟─1bc14166-f68b-11ea-00eb-bf2eb3060b3c
 # ╟─dbfbf7c6-f68b-11ea-085f-bda481d8a15d
 # ╠═4cf932b8-f68c-11ea-3d19-bfb0dbbfdb97
 # ╠═6888138c-f68c-11ea-3b6b-af49a33c7ea5
