@@ -55,6 +55,9 @@ This project is for GSoC 2020.
 Mentored by [Roger Luo](https://github.com/Roger-luo) and [Jinguo Liu](https://github.com/GiggleLiu).
 
 [https://github.com/QuantumBFS/ZXCalculus.jl](https://github.com/QuantumBFS/ZXCalculus.jl)
+
+For this notebook:
+[https://github.com/ChenZhao44/ZXCalculusTutorials](https://github.com/ChenZhao44/ZXCalculusTutorials)
 "
 
 # ╔═╡ 43c4f7e2-f655-11ea-062b-e3876cf5130a
@@ -153,8 +156,8 @@ ZXCalculus.jl is highly integrated with YaoLang.jl.
 
 We can simply add an argument `optimizer = [opts...]` to call the backend circuit optimizer in ZXCalculus.jl. Currently, there are two optimizers supported.
 
-- `:zx_teleport` for the phase teleportation algorithm
-- `:zx_clifford` for Clifford simplification based on the circuit extraction algorithm
+- `:zx_teleport` for the phase teleportation algorithm. [arXiv: 1903.10477](https://arxiv.org/abs/1903.10477)
+- `:zx_clifford` for Clifford simplification based on the circuit extraction algorithm. [arXiv: 1902.03178](https://arxiv.org/abs/1902.03178)
 "
 
 # ╔═╡ 7880d40a-f65e-11ea-213b-fd34d729d463
@@ -407,6 +410,10 @@ md"## Rules for ZXGraph
 There are 7 rules available for `ZXGraph`: 
 
 ![](https://chenzhao44.github.io/assets/blog_res/ZX/zxgraph-rules.png)
+
+[arXiv: 1903.10477](https://arxiv.org/abs/1903.10477)
+
+[arXiv: 1902.03178](https://arxiv.org/abs/1902.03178)
 "
 
 # ╔═╡ 56d61204-f69d-11ea-08da-e7ec818b8cb0
@@ -473,7 +480,7 @@ The above algorithms are first implemented in a Python package [PyZX](https://gi
 
 # ╔═╡ 54c39576-f757-11ea-3cdf-918909c07eb0
 md"## Benchmarks
-We tested the phase teleportation algorithm on 40 circuits with ZXCalculus.jl and PyZX. The benchmark results shown that ZXCalculus.jl has 8x-45x speed-up.
+We tested the phase teleportation algorithm on 40 circuits with ZXCalculus.jl and PyZX. The benchmark results shown that ZXCalculus.jl has 6x-50x speed-up.
 ![benchmarks](https://chenzhao44.github.io/assets/blog_res/ZX/benchmarks.png)
 "
 
