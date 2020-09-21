@@ -1,0 +1,8 @@
+[deps]
+Compose = "a81c6b42-2e10-5240-aca2-a61377ecd94b"
+LightGraphs = "093fc24a-ae57-5d10-9952-331d41423f4d"
+Multigraphs = "7ebac608-6c66-46e6-9856-b5f43e107bac"
+Pluto = "c3e4b0f8-55cb-11ea-2926-15256bba5781"
+YaoLang = "77e32715-2d53-453b-8330-e0520dba5551"
+YaoPlots = "32cfe2d9-419e-45f2-8191-2267705d8dbc"
+ZXCalculus = "3525faa3-032d-4235-a8d4-8c2939a218dd"

@@ -59,7 +59,7 @@ Mentored by [Roger Luo](https://github.com/Roger-luo) and [Jinguo Liu](https://g
 
 # ╔═╡ 43c4f7e2-f655-11ea-062b-e3876cf5130a
 md"# Table of contents
-1. Yao.jl ecosystem
+1. Ecosystem of Yao.jl
 
 2. Using ZXCalculus.jl as a circuit optimizer
     - YaoLang.jl
@@ -76,22 +76,22 @@ md"# Table of contents
 "
 
 # ╔═╡ 7d8587d0-fb2b-11ea-2028-6b18fbbc3289
-md"# Yao.jl ecosystem
+md"# Ecosystem of Yao.jl
 ![](https://github.com/ChenZhao44/ZXCalculusTutorials/raw/zx-meeting/assets/yao-01.png)
 "
 
 # ╔═╡ 5376aa3e-fb2c-11ea-33ff-5b44901bb2d2
-md"# Yao.jl ecosystem
+md"# Ecosystem of Yao.jl
 ![](https://github.com/ChenZhao44/ZXCalculusTutorials/raw/zx-meeting/assets/yao-02.png)
 "
 
 # ╔═╡ 5a8db2b2-fb2c-11ea-1200-8918b662a634
-md"# Yao.jl ecosystem
+md"# Ecosystem of Yao.jl
 ![](https://github.com/ChenZhao44/ZXCalculusTutorials/raw/zx-meeting/assets/yao-03.png)
 "
 
 # ╔═╡ 5fe94f80-fb2c-11ea-1278-2591ddbf30cb
-md"# Yao.jl ecosystem
+md"# Ecosystem of Yao.jl
 ![](https://github.com/ChenZhao44/ZXCalculusTutorials/raw/zx-meeting/assets/yao-04.png)
 "
 
@@ -118,7 +118,7 @@ md"### The macro `@device`
 In any function which is decorated by the macro @device, one can use the following codes to define quantum circuits.
 
 - `j => U` apply gate `U` on the `j`-th qubit
-- `@ctrl j k => U` apply controlled-`U` gate on the `j`-th qubit with the `k`-th qubit as the controlling qubit
+- `@ctrl j k => U` apply controlled-`U` gate on the `j`-th and the `k`-th qubit, where the `j`-th qubit is the controlling qubit and the `k`-th qubit is the target qubit.
 "
 
 # ╔═╡ 23b2fab2-f65d-11ea-0999-b7d4254cc58d
@@ -196,7 +196,7 @@ gate_count(demo_circ_simp) # the simplified circuit with 14 gates
 md"##
 ### Test the equivalence of two circuits
 
-YaoLang.jl can compile quantum programs to instructions that can be run on different devices. For example, we can use the quantum simulator [Yao.jl](https://github.com/QuantumBFS/Yao.jl) as the backend.
+YaoLang.jl can compile quantum programs to instructions that can be run on different devices. For example, we can use the quantum simulator in [Yao.jl](https://github.com/QuantumBFS/Yao.jl) as the backend.
 "
 
 # ╔═╡ 13ada46e-f685-11ea-000d-65752cb70820
@@ -290,7 +290,7 @@ md"# More details about ZXCalculus.jl
 
 In ZXCalculus.jl, general ZX-diagrams are stored in the data structure `ZXDiagram`. The graphical backend of `ZXDiagram` is the multigraph. 
 
-We implemented a Julia multigraph library Multigraphs.jl base on APIs of LightGraphs.jl.
+We implemented a Julia multigraph library [Multigraphs.jl](https://github.com/QuantumBFS/Multigraphs.jl) base on APIs of [LightGraphs.jl](https://github.com/JuliaGraphs/LightGraphs.jl).
 "
 
 # ╔═╡ 3298fd08-f692-11ea-1393-1960d8f41cf4
@@ -306,7 +306,7 @@ md"It will be extremely complicated when constructing large ZX-diagrams.
 # ╔═╡ 1ff8b214-f693-11ea-002b-e3baabfe890f
 md"## Constructing ZX-diagrams from quantum circuits
 
-It is more recommanded to construct `ZXDiagram`s from quantum circuits. In ZXCalculus.jl, QCircuit is a data structure for representing quantum circuit.
+It is more recommanded to construct `ZXDiagram`s from quantum circuits. In ZXCalculus.jl, `QCircuit` is a data structure for representing quantum circuit.
 "
 
 # ╔═╡ 4d0334a4-f694-11ea-15df-2b0603b89f46
@@ -491,7 +491,7 @@ md"# Thank you!
 # ╟─5376aa3e-fb2c-11ea-33ff-5b44901bb2d2
 # ╟─5a8db2b2-fb2c-11ea-1200-8918b662a634
 # ╟─5fe94f80-fb2c-11ea-1278-2591ddbf30cb
-# ╠═8771dae0-fb2c-11ea-2619-73e18f7782ee
+# ╟─8771dae0-fb2c-11ea-2619-73e18f7782ee
 # ╟─0f7c4f36-f65c-11ea-2ad7-fd7a5e566701
 # ╠═e87c192c-f65c-11ea-3fe0-6bfba4889a9c
 # ╟─d3b4bffe-f65d-11ea-2fec-dbcc3902e14b
