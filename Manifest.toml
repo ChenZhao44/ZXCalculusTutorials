@@ -169,9 +169,9 @@ uuid = "56ddb016-857b-54e1-b83d-db4d58db5568"
 
 [[LuxurySparse]]
 deps = ["LinearAlgebra", "Random", "SparseArrays", "StaticArrays"]
-git-tree-sha1 = "3dd487d46c79e5d0ab843580d9333737b60cfee4"
+git-tree-sha1 = "f8a5c54b8fc0adf63e25e2f13a87074169861219"
 uuid = "d05aeea4-b7d4-55ac-b691-9e7fabb07ba2"
-version = "0.6.4"
+version = "0.6.5"
 
 [[MLStyle]]
 git-tree-sha1 = "937eda9ce36fcce082a42edd7181c8d23f4eb550"
@@ -380,7 +380,7 @@ version = "0.11.0"
 
 [[YaoLang]]
 deps = ["ExprTools", "IRTools", "LinearAlgebra", "LuxurySparse", "RBNF", "TimerOutputs", "YaoAPI", "ZXCalculus"]
-git-tree-sha1 = "5d0e2481c4ee1d93adf4d265e86c642466d4649c"
+git-tree-sha1 = "a986755c94bae7bebe5715bac05a10d31727d36d"
 repo-rev = "QASM_2"
 repo-url = "https://github.com/QuantumBFS/YaoLang.jl.git"
 uuid = "77e32715-2d53-453b-8330-e0520dba5551"
@@ -394,6 +394,8 @@ version = "0.5.0"
 
 [[ZXCalculus]]
 deps = ["LightGraphs", "LinearAlgebra", "Multigraphs", "SparseArrays"]
-git-tree-sha1 = "d6a71db7ca05dc2a33ade9b015df651e8731ea4b"
+git-tree-sha1 = "c8caddabb8906014aefc72a1a560a91fea87334d"
+repo-rev = "master"
+repo-url = "https://github.com/QuantumBFS/ZXCalculus.jl.git"
 uuid = "3525faa3-032d-4235-a8d4-8c2939a218dd"
-version = "0.3.0"
+version = "0.3.1"
