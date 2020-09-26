@@ -14,11 +14,10 @@ $ cd ~/ZXCalculusTutorials
 ```
 $ julia --project
 ```
-4. Press `]` to enter the Pkg mode of Julia REPL and enter the following command.
+4. Press `]` to enter the Pkg mode of Julia REPL and enter the following command. It will automatically install all required packages.
 ```julia-repl
 (ZXCalculusTutorials) pkg> instantiate
 ```
-It will automatically install all required packages.
 5. Quit the Pkg mode and use the following command to run the Pluto notebooks.
 ```julia-repl
 julia> using Pluto
