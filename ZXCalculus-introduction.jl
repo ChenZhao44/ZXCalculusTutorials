@@ -5,7 +5,12 @@ using Markdown
 using InteractiveUtils
 
 # ╔═╡ e23ef752-f690-11ea-0c9d-8fed12d250ef
-using YaoPlots, Compose
+begin
+	using Pkg
+	Pkg.activate("Project.toml")
+
+	using YaoPlots, Compose
+end
 
 # ╔═╡ e87c192c-f65c-11ea-3fe0-6bfba4889a9c
 using YaoLang
